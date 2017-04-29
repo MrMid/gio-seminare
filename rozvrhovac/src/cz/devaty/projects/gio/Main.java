@@ -16,14 +16,19 @@ public class Main {
 
     private static String FILE = "a.csv";
 
+
     public static void main(String[] args) {
         try {
             ArrayList<Student> students = loadData();
-
+            computeGroups(students);
 
         } catch (FileNotFoundException e) {
             System.out.println("Error loading data");
         }
+    }
+
+    private static void computeGroups(ArrayList<Student> students) {
+
     }
 
     private static ArrayList<Student> loadData() throws FileNotFoundException {
