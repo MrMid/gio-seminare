@@ -8,8 +8,13 @@ class Seminar {
     private String name;
     private char group;
 
+    public void setGroup(char group) {
+        this.group = group;
+    }
+
     public Seminar(String name) {
         this.name = name;
+        this.group = 'a';
     }
 
     Seminar(String name, char group) {
@@ -34,5 +39,10 @@ class Seminar {
     @Override
     public String toString() {
         return this.name;
+    }
+
+    @Override
+    protected Seminar clone() throws CloneNotSupportedException {
+        return new Seminar(this.name, this.group);
     }
 }
